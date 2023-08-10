@@ -1,4 +1,6 @@
-# 웹팀 화면 제공용
+# simple log search
+docker 공부 전 개발, 
+docker로 변경 필요함
 
 
 ## python version 

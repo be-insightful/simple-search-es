@@ -31,38 +31,38 @@
     </fieldset>
 
     <hr>
-    <table border="1px; solid; black" cellpadding="10px">
+    <table border="1px; souserid; black" cellpadding="10px">
         <caption><span style="color: dodgerblue; font-weight: bold; font-size: 1.5em;">{{uid}}</span>'s event log data
             <br>
             <span style="color: mediumseagreen; font-weight: bold;font-size: 1.5em;">{{stdatetime}}</span>~<span
                 style="color: mediumseagreen; font-weight: bold;font-size: 1.5em;">{{eddatetime}}</span>
             <br>
             count : <span style="color: tomato; font-weight: bold;font-size: 1.5em;">{{docs_count}}</span>
-            
+
             <span style="color: black; font-weight: bold;font-size: 1.5em;">print {{print_count}}</span>
         </caption>
         <p>index list : {{index_list}}</p>
         <thead>
             <tr>
                 <th>no</th>
-                <th>acc</th>
-                <th>svc</th>
-                <th>cocd</th>
+                <th>account</th>
+                <th>service</th>
+                <th>code</th>
                 <th>uname</th>
                 <th>os</th>
-                <th>evtype</th>
-                <th>lid</th>
-                <th>lgsrc</th>
+                <th>event</th>
+                <th>userid</th>
+                <th>source</th>
                 <th>media</th>
-                <th>svrtype</th>
-                <th>acctype</th>
-                <th>evkind</th>
-                <th>scrpath</th>
+                <th>type</th>
+                <th>accounttype</th>
+                <th>eventtype</th>
+                <th>sourcepath</th>
                 <th>uid</th>
                 <th>task</th>
-                <th>ltz</th>
-                <th>evmsg</th>
-                <th>udate</th>
+                <th>timezone</th>
+                <th>message</th>
+                <th>datetime</th>
             </tr>
         </thead>
 
@@ -70,24 +70,24 @@
             {% for doc in docs %}
             <tr>
                 <td>{{doc.no}}</td>
-                <td>{{doc.acc}}</td>
-                <td>{{doc.svc}}</td>
-                <td>{{doc.cocd}}</td>
+                <td>{{doc.account}}</td>
+                <td>{{doc.service}}</td>
+                <td>{{doc.code}}</td>
                 <td>{{doc.uname}}</td>
                 <td>{{doc.os}}</td>
-                <td>{{doc.evtype}}</td>
-                <td>{{doc.lid}}</td>
-                <td>{{doc.lgsrc}}</td>
+                <td>{{doc.event}}</td>
+                <td>{{doc.userid}}</td>
+                <td>{{doc.source}}</td>
                 <td>{{doc.media}}</td>
-                <td>{{doc.svrtype}}</td>
-                <td>{{doc.acctype}}</td>
-                <td>{{doc.evkind}}</td>
-                <td>{{doc.scrpath}}</td>
+                <td>{{doc.type}}</td>
+                <td>{{doc.accounttype}}</td>
+                <td>{{doc.eventtype}}</td>
+                <td>{{doc.sourcepath}}</td>
                 <td>{{doc.uid}}</td>
                 <td>{{doc.task}}</td>
-                <td>{{doc.ltz}}</td>
-                <td>{{doc.evmsg}}</td>
-                <td>{{doc.udate}}</td>
+                <td>{{doc.timezone}}</td>
+                <td>{{doc.message}}</td>
+                <td>{{doc.datetime}}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -95,8 +95,8 @@
 
     </table>
     <script>
-        document.getElementById('stdatetime').value= new Date().toISOString().slice(0, 16);
-        document.getElementById('eddatetime').value= new Date().toISOString().slice(0, 16);
+        document.getElementById('stdatetime').value = new Date().toISOString().slice(0, 16);
+        document.getElementById('eddatetime').value = new Date().toISOString().slice(0, 16);
     </script>
 </body>
 
